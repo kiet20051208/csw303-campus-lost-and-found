@@ -114,7 +114,7 @@ The repository includes `render.yaml` for a public Render Web Service. The appli
 
 On a blank ephemeral filesystem, startup initializes SQLite and inserts the non-personal demo dataset once. An existing database is never reset during application startup. A free Render instance can restart and lose SQLite data; the safe demo dataset is recreated when the filesystem is blank.
 
-**Public URL:** Added only after a successful, externally verified deployment.
+**Public URL:** [https://csw303-campus-lost-and-found.onrender.com](https://csw303-campus-lost-and-found.onrender.com)
 
 ## Demo Accounts
 
