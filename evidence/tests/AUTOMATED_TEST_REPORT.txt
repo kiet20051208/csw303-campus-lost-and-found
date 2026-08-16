@@ -1,0 +1,43 @@
+test_auth_01_register_hashes_password (test_app.AuthenticationTests.test_auth_01_register_hashes_password) ... ok
+test_auth_02_duplicate_registration_rejected (test_app.AuthenticationTests.test_auth_02_duplicate_registration_rejected) ... ok
+test_auth_03_login_creates_valid_session (test_app.AuthenticationTests.test_auth_03_login_creates_valid_session) ... ok
+test_auth_04_invalid_login_rejected (test_app.AuthenticationTests.test_auth_04_invalid_login_rejected) ... ok
+test_auth_05_logout_invalidates_session (test_app.AuthenticationTests.test_auth_05_logout_invalidates_session) ... ok
+test_auth_06_protected_report_creation_rejected (test_app.AuthenticationTests.test_auth_06_protected_report_creation_rejected) ... ok
+test_at_us09_01_safe_contact_flow_is_available (test_app.ContactTests.test_at_us09_01_safe_contact_flow_is_available) ... ok
+test_at_us09_02_contact_event_is_recorded (test_app.ContactTests.test_at_us09_02_contact_event_is_recorded) ... ok
+test_at_us09_03_privacy_warning_contract_hides_email (test_app.ContactTests.test_at_us09_03_privacy_warning_contract_hides_email) ... ok
+test_contact_04_inactive_report_rejected (test_app.ContactTests.test_contact_04_inactive_report_rejected) ... ok
+test_rep_01_create_lost_report (test_app.ReportTests.test_rep_01_create_lost_report) ... ok
+test_rep_02_create_found_report (test_app.ReportTests.test_rep_02_create_found_report) ... ok
+test_rep_03_details_do_not_expose_private_identity (test_app.ReportTests.test_rep_03_details_do_not_expose_private_identity) ... ok
+test_rep_04_required_field_validation (test_app.ReportTests.test_rep_04_required_field_validation) ... ok
+test_at_us12_01_owner_can_mark_returned (test_app.ReturnedLifecycleTests.test_at_us12_01_owner_can_mark_returned) ... ok
+test_at_us12_02_returned_case_is_excluded_from_active_matching (test_app.ReturnedLifecycleTests.test_at_us12_02_returned_case_is_excluded_from_active_matching) ... ok
+test_at_us12_03_returned_report_leaves_active_list_and_enters_history (test_app.ReturnedLifecycleTests.test_at_us12_03_returned_report_leaves_active_list_and_enters_history) ... ok
+test_rel_01_returned_status_persists_after_new_connection (test_app.ReturnedLifecycleTests.test_rel_01_returned_status_persists_after_new_connection) ... ok
+test_rel_02_invalid_transition_rejected (test_app.ReturnedLifecycleTests.test_rel_02_invalid_transition_rejected) ... ok
+test_rel_03_repeated_action_is_idempotent (test_app.ReturnedLifecycleTests.test_rel_03_repeated_action_is_idempotent) ... ok
+test_rel_04_failed_authorization_does_not_mutate_state (test_app.ReturnedLifecycleTests.test_rel_04_failed_authorization_does_not_mutate_state) ... ok
+test_returned_04_unauthorized_user_is_rejected (test_app.ReturnedLifecycleTests.test_returned_04_unauthorized_user_is_rejected) ... ok
+test_at_us06_01_combined_filters_satisfy_all_criteria (test_app.SearchAndFilterTests.test_at_us06_01_combined_filters_satisfy_all_criteria) ... ok
+test_at_us06_02_filter_by_location_and_inclusive_date (test_app.SearchAndFilterTests.test_at_us06_02_filter_by_location_and_inclusive_date) ... ok
+test_at_us06_03_clear_no_results_state (test_app.SearchAndFilterTests.test_at_us06_03_clear_no_results_state) ... ok
+test_search_01_keyword_reads_database (test_app.SearchAndFilterTests.test_search_01_keyword_reads_database) ... ok
+test_search_02_filter_by_category (test_app.SearchAndFilterTests.test_search_02_filter_by_category) ... ok
+test_search_05_invalid_date_range_is_controlled (test_app.SearchAndFilterTests.test_search_05_invalid_date_range_is_controlled) ... ok
+test_sec_01_unauthenticated_contact_rejected (test_app.SecurityTests.test_sec_01_unauthenticated_contact_rejected) ... ok
+test_sec_02_unauthenticated_returned_update_rejected (test_app.SecurityTests.test_sec_02_unauthenticated_returned_update_rejected) ... ok
+test_sec_03_invalid_input_is_controlled (test_app.SecurityTests.test_sec_03_invalid_input_is_controlled) ... ok
+test_sec_04_empty_required_input_rejected (test_app.SecurityTests.test_sec_04_empty_required_input_rejected) ... ok
+test_sec_05_overlong_input_rejected (test_app.SecurityTests.test_sec_05_overlong_input_rejected) ... ok
+test_sec_06_script_like_input_rejected (test_app.SecurityTests.test_sec_06_script_like_input_rejected) ... ok
+test_http_01_home_and_css_load (test_app.WsgiIntegrationTests.test_http_01_home_and_css_load) ... ok
+test_http_02_protected_page_returns_controlled_401 (test_app.WsgiIntegrationTests.test_http_02_protected_page_returns_controlled_401) ... ok
+test_http_03_direct_unauthorized_returned_request_is_blocked (test_app.WsgiIntegrationTests.test_http_03_direct_unauthorized_returned_request_is_blocked) ... ok
+test_http_04_report_list_renders_empty_state (test_app.WsgiIntegrationTests.test_http_04_report_list_renders_empty_state) ... ok
+
+----------------------------------------------------------------------
+Ran 38 tests in 16.573s
+
+OK
