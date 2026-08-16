@@ -35,11 +35,12 @@ test_sec_04_empty_required_input_rejected (test_app.SecurityTests.test_sec_04_em
 test_sec_05_overlong_input_rejected (test_app.SecurityTests.test_sec_05_overlong_input_rejected) ... ok
 test_sec_06_script_like_input_rejected (test_app.SecurityTests.test_sec_06_script_like_input_rejected) ... ok
 test_http_01_home_and_css_load (test_app.WsgiIntegrationTests.test_http_01_home_and_css_load) ... ok
+test_http_01b_head_health_check_returns_200_without_body (test_app.WsgiIntegrationTests.test_http_01b_head_health_check_returns_200_without_body) ... ok
 test_http_02_protected_page_returns_controlled_401 (test_app.WsgiIntegrationTests.test_http_02_protected_page_returns_controlled_401) ... ok
 test_http_03_direct_unauthorized_returned_request_is_blocked (test_app.WsgiIntegrationTests.test_http_03_direct_unauthorized_returned_request_is_blocked) ... ok
 test_http_04_report_list_renders_empty_state (test_app.WsgiIntegrationTests.test_http_04_report_list_renders_empty_state) ... ok
 
 ----------------------------------------------------------------------
-Ran 40 tests in 16.988s
+Ran 41 tests in 15.715s
 
 OK

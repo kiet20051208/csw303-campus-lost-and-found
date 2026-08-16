@@ -221,6 +221,11 @@ class WsgiIntegrationTests(CampusLostFoundTestCase):
         self.assertEqual(200, status)
         self.assertEqual("text/css; charset=utf-8", headers["Content-Type"])
 
+    def test_http_01b_head_health_check_returns_200_without_body(self):
+        status, _, body = self.request("/", method="HEAD")
+        self.assertEqual(200, status)
+        self.assertEqual("", body)
+
     def test_http_02_protected_page_returns_controlled_401(self):
         status, _, body = self.request("/reports/new")
         self.assertEqual(401, status)

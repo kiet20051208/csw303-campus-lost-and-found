@@ -410,13 +410,15 @@ class CampusLostFoundApp:
             headers.insert(0, ("Content-Type", "text/html; charset=utf-8"))
         headers.append(("Content-Length", str(len(body.encode("utf-8")))))
         start_response(f"{status} {HTTPStatus(status).phrase}", headers)
+        if request.method == "HEAD":
+            return [b""]
         return [body.encode("utf-8")]
 
     def dispatch(self, request: Request) -> tuple[int, list[tuple[str, str]], str]:
         if request.path == "/static/style.css":
             css = (ROOT / "static" / "style.css").read_text(encoding="utf-8")
             return 200, [("Content-Type", "text/css; charset=utf-8")], css
-        if request.path == "/" and request.method == "GET":
+        if request.path == "/" and request.method in {"GET", "HEAD"}:
             return 200, [], self.home(request)
         if request.path == "/register":
             return self.register_route(request)
