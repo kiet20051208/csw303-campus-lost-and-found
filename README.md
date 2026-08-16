@@ -155,7 +155,7 @@ The second command regenerates `evidence/performance/PERF_Search_Filter_Timing.c
 
 ## Team Members
 
-- Duong Tan Kiet
-- Le Cong Thach
-- Nguyen Hoang Anh Khoi
-- Hy Gia Long
+- Dương Tấn Kiệt
+- Lê Công Thạch
+- Nguyễn Hoàng Anh Khôi
+- Hỷ Gia Long
