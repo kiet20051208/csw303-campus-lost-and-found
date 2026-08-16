@@ -1,0 +1,12 @@
+.venv/
+.venv-clean/
+__pycache__/
+*.py[cod]
+.env
+.idea/
+.vscode/
+instance/*.db
+*.db-journal
+test*.db
+uploads/
+
