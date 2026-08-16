@@ -96,6 +96,26 @@ python run.py
 
 Open [http://127.0.0.1:8000](http://127.0.0.1:8000). Stop the server with `Ctrl+C`.
 
+## Public Deployment
+
+The repository includes `render.yaml` for a public Render Web Service. The application binds to `0.0.0.0` and reads Render's assigned `PORT` automatically while retaining port `8000` for local use.
+
+| Setting | Value |
+| --- | --- |
+| Repository | `https://github.com/kiet20051208/csw303-campus-lost-and-found.git` |
+| Branch | `main` |
+| Root Directory | Leave blank |
+| Runtime | Python |
+| Plan | Free |
+| Build Command | `pip install -r requirements.txt` |
+| Start Command | `python run.py` |
+| Environment | `PYTHON_VERSION=3.11.11` |
+| Port | Do not set manually |
+
+On a blank ephemeral filesystem, startup initializes SQLite and inserts the non-personal demo dataset once. An existing database is never reset during application startup. A free Render instance can restart and lose SQLite data; the safe demo dataset is recreated when the filesystem is blank.
+
+**Public URL:** Added only after a successful, externally verified deployment.
+
 ## Demo Accounts
 
 | Role | Email | Password |

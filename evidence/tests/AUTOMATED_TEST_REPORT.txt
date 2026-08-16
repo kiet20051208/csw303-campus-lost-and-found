@@ -8,6 +8,8 @@ test_at_us09_01_safe_contact_flow_is_available (test_app.ContactTests.test_at_us
 test_at_us09_02_contact_event_is_recorded (test_app.ContactTests.test_at_us09_02_contact_event_is_recorded) ... ok
 test_at_us09_03_privacy_warning_contract_hides_email (test_app.ContactTests.test_at_us09_03_privacy_warning_contract_hides_email) ... ok
 test_contact_04_inactive_report_rejected (test_app.ContactTests.test_contact_04_inactive_report_rejected) ... ok
+test_deploy_01_blank_database_is_initialized_and_seeded (test_app.DeploymentStartupTests.test_deploy_01_blank_database_is_initialized_and_seeded) ... ok
+test_deploy_02_existing_database_is_not_reset_or_duplicated (test_app.DeploymentStartupTests.test_deploy_02_existing_database_is_not_reset_or_duplicated) ... ok
 test_rep_01_create_lost_report (test_app.ReportTests.test_rep_01_create_lost_report) ... ok
 test_rep_02_create_found_report (test_app.ReportTests.test_rep_02_create_found_report) ... ok
 test_rep_03_details_do_not_expose_private_identity (test_app.ReportTests.test_rep_03_details_do_not_expose_private_identity) ... ok
@@ -38,6 +40,6 @@ test_http_03_direct_unauthorized_returned_request_is_blocked (test_app.WsgiInteg
 test_http_04_report_list_renders_empty_state (test_app.WsgiIntegrationTests.test_http_04_report_list_renders_empty_state) ... ok
 
 ----------------------------------------------------------------------
-Ran 38 tests in 16.573s
+Ran 40 tests in 16.988s
 
 OK

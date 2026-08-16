@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: csw303-campus-lost-and-found
+    runtime: python
+    plan: free
+    region: singapore
+    repo: https://github.com/kiet20051208/csw303-campus-lost-and-found.git
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: python run.py
+    healthCheckPath: /
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.11

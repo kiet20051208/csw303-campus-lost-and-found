@@ -6,6 +6,7 @@ from urllib.parse import urlencode
 
 from campus_lost_found import Store, create_app
 from campus_lost_found.app import AppError
+from campus_lost_found.demo_data import seed_demo_data
 
 
 class CampusLostFoundTestCase(unittest.TestCase):
@@ -235,6 +236,25 @@ class WsgiIntegrationTests(CampusLostFoundTestCase):
         status, _, body = self.request("/reports?keyword=definitely-missing")
         self.assertEqual(200, status)
         self.assertIn("No matching reports", body)
+
+
+class DeploymentStartupTests(unittest.TestCase):
+    def test_deploy_01_blank_database_is_initialized_and_seeded(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            store = Store(Path(temp_dir) / "deploy.db")
+            self.assertTrue(seed_demo_data(store))
+            self.assertEqual(3, store.counts()["users"])
+            self.assertEqual(8, store.counts()["active"])
+
+    def test_deploy_02_existing_database_is_not_reset_or_duplicated(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            store = Store(Path(temp_dir) / "deploy.db")
+            seed_demo_data(store)
+            token = store.authenticate("minh.anh@campus.edu", "Demo123!")
+            report = store.create_report(token, "LOST", "Persistent demo item", "Other", "Building C", "2026-08-16", "Must survive a second startup.")
+            self.assertFalse(seed_demo_data(store))
+            self.assertEqual("Persistent demo item", store.get_report(report["id"])["item_name"])
+            self.assertEqual(9, store.counts()["active"])
 
 
 if __name__ == "__main__":
